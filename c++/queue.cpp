@@ -35,9 +35,9 @@ class Queue {
     public:
 
         /**
-         * Constante para a exeção de ovverflow da fila
+         * Constante para a exeção de overflow da fila
          */
-        const static int EXCEPTION_STACK_OVERFLOW = 1;
+        const static int EXCEPTION_QUEUE_OVERFLOW = 1;
 
         /**
          * Constante para a exceção de fila vazia
@@ -102,7 +102,7 @@ class Queue {
          * @return true para fila vazia, false para lista não-vazia
          */
         bool isEmpty() {
-            return (bool) this->counter;
+            return !((bool) this->counter);
         }
 
         /**
