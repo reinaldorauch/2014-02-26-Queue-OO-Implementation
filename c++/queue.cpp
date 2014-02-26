@@ -105,4 +105,23 @@ class Queue {
             return (bool) this->counter;
         }
 
+        /**
+         * Imprime a fila
+         */
+        void print() {
+            int i = 0, j = this->start;
+
+            for(int i = 0; i < this->counter; i++) {
+
+                std::cout << "Pos: " << i << ", valor: " << *(this->queue + j) << "\n";
+
+                if(j == (Queue::QUEUE_SIZE - 1))
+                    j = 0;
+                else
+                    j++;
+
+            }
+
+        }
+
 };
