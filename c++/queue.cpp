@@ -75,7 +75,7 @@ class Queue {
          */
         void pop() {
 
-            if(this->counter == 0)
+            if(this->isEmpty())
                 throw 2;
 
             this->counter--;
@@ -89,7 +89,20 @@ class Queue {
 
         }
 
+        /**
+         * Retorna o elemento que está na primeira posição da fila
+         * @return o dito elemento
+         */
         int begin() {
             return *(this->queue + this->start);
         }
-}
+
+        /**
+         * Retorna se a fila está vazia ou não
+         * @return true para fila vazia, false para lista não-vazia
+         */
+        bool isEmpty() {
+            return (bool) this->counter;
+        }
+
+};
